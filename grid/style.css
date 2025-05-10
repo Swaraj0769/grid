@@ -63,8 +63,7 @@ body {
 #main #right {
   grid-column: 3;
   grid-row: 1/4;
-  -o-object-fit: cover;
-     object-fit: cover;
+  margin-right: 100px;
   padding: 20px;
 }
 #main #right video {
@@ -90,4 +89,65 @@ body {
 #main #arrow i {
   font-size: 30px;
   font-weight: 100;
+}
+
+@media (max-width: 600px) {
+  #main {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60px 32% 10%;
+  }
+  #main #left-top-left #square {
+    width: 15px;
+    height: 15px;
+  }
+  #main #left-top-right {
+    text-align: right;
+    padding: 20px;
+  }
+  #main #left-top-right h4 {
+    display: none;
+  }
+  #main #left-top-right h5 {
+    display: none;
+  }
+  #main #left-top-right h6 {
+    display: initial;
+    font-size: 25px;
+  }
+  #main #left-center {
+    padding: 10px 20px;
+  }
+  #main #left-center h1 {
+    font-size: 14.5vw;
+    line-height: 11.5vw;
+  }
+  #main #left-center h1:nth-child(2n) {
+    justify-self: right;
+  }
+  #main #left-bottom {
+    padding: 5px 20px;
+  }
+  #main #left-bottom p {
+    width: 90%;
+    font-size: 14px;
+  }
+  #main #right {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    padding-right: 28px;
+  }
+  #main #right video {
+    height: 40%;
+    width: 126%;
+  }
+  #main #arrow {
+    padding: 20px;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  #main #arrow i {
+    font-size: 30px;
+    font-weight: 100;
+  }
 }/*# sourceMappingURL=style.css.map */
